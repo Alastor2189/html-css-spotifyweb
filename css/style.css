@@ -5,18 +5,112 @@
 }
 
 html {
-    color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* MAIN */
+
+main {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    overflow: hidden;
+}
+
 .sidebar {
-    background-color: black;
-    width: 15%;
+    width: 200px;
     height: 100%;
+    display: flex;
+}
+
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: calc(100% - 80px);
+    min-height: 350px;
+}
+
+.sidebar li {
+    opacity: .7;
+    font-size: 0.7em;
+}
+
+.sidebar img:not(.logo) {
+    height: 25px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.sidebar li:hover {
+    opacity: 1;
+}
+
+.menu {
+    height: 150px;
+}
+
+.main-menu {
+    margin: 15px 0;
+}
+
+.main-menu li {
+    display: flex;
+    align-items: center;
+    padding: 4px 0 4px 20px;
+}
+
+.list-play {
+    overflow-y: hidden;
+    flex-grow: 1;
+}
+
+.menu-playlist {
+    overflow-y: auto;
+    height: 80%;
+}
+
+.list-play li {
+    padding: 9px 0 9px 20px;
+}
+
+.list-play h4 {
+    text-transform: uppercase;
+    padding: 8px 0px 12px 20px;
+}
+
+.sidebar-bottom {
+    height: 80px;
+}
+
+
+/* CONTENT */
+
+.content {
+    width: calc(100% - 200px);
+    height: 100%;
+    overflow-y: auto;
+    background-color: #141922;
 }
 
 .upgrade {
-    background-color: #080b12;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .playlist {
@@ -25,4 +119,6 @@ html {
 
 footer {
     background-color: #282828;
+    height: 100px;
+    width: 100%;
 }
