@@ -33,6 +33,9 @@ main {
     width: 200px;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding-left: 20px;
 }
 
 .sidebar-top {
@@ -43,17 +46,24 @@ main {
     min-height: 350px;
 }
 
-.sidebar li {
+.sidebar li,
+p {
     opacity: .7;
     font-size: 0.7em;
 }
 
-.sidebar img:not(.logo) {
+.sidebar img:not(.logo img) {
     height: 25px;
 }
 
 .logo {
-    height: 80px;
+    width: 100%;
+}
+
+.logo-img {
+    padding: 20px 42px 0px 0px;
+    width: 100%;
+    height: 60px;
 }
 
 .sidebar li:hover {
@@ -61,7 +71,7 @@ main {
 }
 
 .menu {
-    height: 150px;
+    height: 120px;
 }
 
 .main-menu {
@@ -71,12 +81,16 @@ main {
 .main-menu li {
     display: flex;
     align-items: center;
-    padding: 4px 0 4px 20px;
+    padding: 4px 0 4px 0px;
 }
 
 .list-play {
     overflow-y: hidden;
     flex-grow: 1;
+}
+
+.list-play p {
+    font-weight: bold;
 }
 
 .menu-playlist {
@@ -85,12 +99,37 @@ main {
 }
 
 .list-play li {
-    padding: 9px 0 9px 20px;
+    padding: 9px 0 9px 0px;
 }
 
 .list-play h4 {
     text-transform: uppercase;
-    padding: 8px 0px 12px 20px;
+    padding: 8px 0px 12px 0px;
+    font-size: 0.8em;
+}
+
+.fas.fa-plus {
+    color: black;
+    background-color: white;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+.fas.fa-arrow-down {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0px;
+    font-size: 0.7em;
+}
+
+.sidebar hr {
+    margin: 8px 0;
+}
+
+.icon-doe {
+    filter: invert(0.5);
+    background-color: #808080;
+    border-radius: 20px;
 }
 
 .sidebar-bottom {
@@ -105,12 +144,16 @@ main {
     height: 100%;
     overflow-y: auto;
     background-color: #141922;
+    padding: 120px 20px 20px;
 }
 
 .upgrade {
-    width: 100%;
+    width: calc(100% - 200px);
+    position: fixed;
+    top: 0;
+    right: 0;
     height: 100px;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .4;
 }
 
 .playlist {
