@@ -69,6 +69,10 @@ p {
     height: 25px;
 }
 
+#logo-mob {
+    display: none;
+}
+
 .logo {
     width: 100%;
 }
@@ -100,7 +104,7 @@ p {
     border-left: 3px solid black;
 }
 
-.main-menu li {
+.main-menu li>a {
     display: flex;
     align-items: center;
     padding: 4px 0 4px 13px;
@@ -210,17 +214,27 @@ p {
 .menu-nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .menu-nav li {
-    padding: 0 17px;
+    padding: 10px 17px;
     text-transform: uppercase;
     opacity: 0.7;
     font-size: 0.8em;
     font-weight: bold;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    white-space: nowrap;
+}
+
+.menu-nav li:first-child::after {
+    content: '';
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    margin-top: 20px;
+    background-color: #adff2f;
 }
 
 .menu-nav li:hover {
@@ -244,11 +258,75 @@ p {
 
 .recent-playlist {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .music {
     width: calc(100% / 6 - 5px);
     margin-right: 5px;
+}
+
+@media screen and (min-width:768px) and (max-width: 1099px) {
+    .music {
+        width: calc(100% / 4 - 5px);
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width: 767px) {
+    .music {
+        width: calc(100% / 2 - 5px);
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sidebar {
+        width: 40px;
+    }
+    .logo {
+        width: 100%;
+    }
+    #logo-desk {
+        display: none;
+    }
+    #logo-mob {
+        display: block;
+        padding: 6px;
+        width: 100%;
+    }
+    .list-play {
+        display: none;
+    }
+    .main-menu li>a {
+        display: flex;
+        align-items: center;
+        padding: 4px 0 4px 6px;
+    }
+    .sidebar span,
+    .sidebar hr {
+        display: none;
+    }
+    .sidebar-bottom {
+        height: 80px;
+        padding-left: 10px;
+    }
+    .icon-doe {
+        margin-top: 6px;
+    }
+    .content {
+        width: calc(100% - 40px);
+    }
+    .upgrade {
+        width: calc(100% - 40px);
+    }
+    .menu-nav li {
+        font-size: 0.5em;
+    }
+    .music {
+        width: calc(100% / 2 - 5px);
+        margin-right: 5px;
+    }
 }
 
 .music img {
